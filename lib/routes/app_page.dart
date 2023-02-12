@@ -1,32 +1,36 @@
 import 'package:get/get.dart';
-
 import 'route_name.dart';
 
 //pages
 import '../pages/home_page/index.dart';
-import '../pages/count_page.dart';
-import '../pages/buscador_page.dart';
+import '../pages/to_rank/index.dart';
+import '../pages/players/index.dart';
+import '../pages/add_player/index.dart';
 
 //bindings
-import '../bindings/count_binding.dart';
-import '../bindings/buscador_binding.dart';
+import '../bindings/to_rank_binding.dart';
+import '../bindings/players_binding.dart';
 
 class AppPage {
   static final pages = [
     GetPage(
       name: RouteName.home,
       page: () => HomePage(),
-      binding: BuscadorBinding(),
     ),
     GetPage(
-      name: RouteName.count,
-      page: () => CountPage(),
-      binding: CountBinding(),
+      name: RouteName.to_rank,
+      page: () => ToRankPage(),
+      binding: ToRankBinding(),
     ),
     GetPage(
-      name: RouteName.buscador,
-      page: () => BuscadorPage(),
-      binding: BuscadorBinding(),
+      name: RouteName.players,
+      page: () => ListPlayersPage(),
+      binding: PlayersBinding(),
+    ),
+    GetPage(
+      name: RouteName.new_player,
+      page: () => NewPlayerPage(),
+      binding: PlayersBinding(),
     ),
   ];
 }

@@ -4,9 +4,10 @@ import 'package:get/get.dart';
 import '../../size_config.dart';
 import '../../widgets/default_button.dart';
 
-import '../../controllers/buscador_controller.dart';
+import '../../controllers/players_controller.dart';
+import '../../routes/route_name.dart';
 
-class HomePage extends GetView<BuscadorController> {
+class HomePage extends GetView<PlayersController> {
   @override
   Widget build(BuildContext context) {
     final ButtonStyle style = ElevatedButton.styleFrom(
@@ -22,7 +23,7 @@ class HomePage extends GetView<BuscadorController> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             DefaultButton(
-              press: () {},
+              press: () => Get.toNamed(RouteName.to_rank),
               text: 'SORTEAR',
             ),
             SizedBox(
@@ -30,8 +31,8 @@ class HomePage extends GetView<BuscadorController> {
               5,
             )),
             DefaultButton(
-              press: () {},
-              text: 'CADASTRO DE JOGADORES',
+              press: () => Get.toNamed(RouteName.players),
+              text: 'LISTA DE JOGADORES',
               color: Colors.blue,
             ),
             SizedBox(

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+
+//
 import '../data/repository/external_data.dart';
 
-class BuscadorController extends GetxController {
+class PlayersController extends GetxController {
   var titulo = "Listando e Buscando".obs;
 
   final TextEditingController searchKey = TextEditingController();
 
+  List players = allUsers.obs;
   List foundUsers = [].obs;
   int count = 0;
 
